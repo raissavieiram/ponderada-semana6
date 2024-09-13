@@ -24,28 +24,25 @@ A solução inclui os seguintes passos:
 
 ### Diagrama de Blocos
 
-```markdown
-+------------------------+                +-------------------+                +-----------------------+
-|                        |                |                   |                |                       |
-| Interface do Usuário    |  --- edita --> |    Main API        | -- armazena -->| Banco de Dados         |
-|  (Front-end)            |                | (Rota de Edição)   |                | (Armazena normas e tags)|
-+------------------------+                +-------------------+                +-----------------------+
-                                                                                  |
-                                                                                  v
-+------------------------+                +-------------------+            +-----------------------+
-|                        |                |                   |            |                       |
-|  Main API              | --- semanal -->| Script de Retreinamento |-- treina -->| Modelo de PLN        |
-| (Tarefa Agendada)      |                | (Tarefa Agendada)  |            | (Modelo de Tagueamento) |
-+------------------------+                +-------------------+            +-----------------------+
-                                                                                |
-                                                                                v
-                                                                  +-----------------------+
-                                                                  |                       |
-                                                                  |  Deploy do Modelo      |
-                                                                  | (Versionamento e Deploy)|
-                                                                  +-----------------------+
-
-```
++-------------------------+               +---------------------+                +-------------------------+
+|                         |               |                     |                |                         |
+| Interface do Usuário    |  --- edita -->|    Main API        | -- armazena -->| Banco de Dados          |
+|  (Front-end)            |               | (Rota de Edição)   |                | (Armazena normas e tags)|
++-------------------------+               +---------------------+                +-------------------------+
+                                                                                              |
+                                                                                              v
++------------------------+                +-------------------------+             +-------------------------+
+|                        |                |                         |             |                         |
+|  Main API              | --- semanal -->| Script de Retreinamento |-- treina -->| Modelo de PLN           |
+| (Tarefa Agendada)      |                | (Tarefa Agendada)       |             | (Modelo de Tagueamento) |
++------------------------+                +-------------------------+             +-------------------------+
+                                                                                             |
+                                                                                             v
+                                                                                  +-------------------------+
+                                                                                  |                         |
+                                                                                  |  Deploy do Modelo       |
+                                                                                  | (Versionamento e Deploy)|
+                                                                                  +-------------------------+
 
 ### Descrição dos Módulos
 
