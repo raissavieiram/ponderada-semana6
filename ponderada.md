@@ -27,18 +27,18 @@ A solução inclui os seguintes passos:
 ```markdown
 +------------------------+                +-------------------+                +-----------------------+
 |                        |                |                   |                |                       |
-| Interface do Usuário   |  --- edita --> |    Main API        | -- armazena -->| Banco de Dados         |
-|  (Front-end)           |                | (Rota de Edição)   |                | (Armazena normas e tags)|
+| Interface do Usuário    |  --- edita --> |    Main API        | -- armazena -->| Banco de Dados         |
+|  (Front-end)            |                | (Rota de Edição)   |                | (Armazena normas e tags)|
 +------------------------+                +-------------------+                +-----------------------+
-                                                                           |
-                                                                           v
+                                                                                  |
+                                                                                  v
 +------------------------+                +-------------------+            +-----------------------+
 |                        |                |                   |            |                       |
-|  Main API              | --- semanal -->| Script de Retreinamento |-- treina -->| Modelo de PLN           |
+|  Main API              | --- semanal -->| Script de Retreinamento |-- treina -->| Modelo de PLN        |
 | (Tarefa Agendada)      |                | (Tarefa Agendada)  |            | (Modelo de Tagueamento) |
 +------------------------+                +-------------------+            +-----------------------+
-                                                                           |
-                                                                           v
+                                                                                |
+                                                                                v
                                                                   +-----------------------+
                                                                   |                       |
                                                                   |  Deploy do Modelo      |
