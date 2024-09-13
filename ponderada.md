@@ -24,6 +24,7 @@ A solução inclui os seguintes passos:
 
 ### Diagrama de Blocos
 
+```markdown
 +-------------------------+               +---------------------+                +-------------------------+
 |                         |               |                     |                |                         |
 | Interface do Usuário    |  --- edita -->|    Main API        | -- armazena -->| Banco de Dados          |
@@ -43,6 +44,7 @@ A solução inclui os seguintes passos:
                                                                                   |  Deploy do Modelo       |
                                                                                   | (Versionamento e Deploy)|
                                                                                   +-------------------------+
+```
 
 ### Descrição dos Módulos
 
